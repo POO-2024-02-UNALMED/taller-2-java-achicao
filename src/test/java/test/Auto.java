@@ -21,8 +21,8 @@ public class Auto {
 	
 	String verificarIntegridad() {
 		if (registro == motor.registro) {
-			for (int i = 0;i < asientos.length;i++) {
-				if (asientos[i].registro != registro) {
+			for (Asiento i:asientos) {
+				if (i.registro != registro) {
 					return "Las piezas no son originales";
 				}
 			}
