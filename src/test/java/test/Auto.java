@@ -9,12 +9,17 @@ public class Auto {
 	int registro;
 	static String cantidadCreados;
 	
-	int cantidadAsientos (Asiento[] asientos){
-		int cantidadAsientos = asientos.length;
-		return cantidadAsientos;
+	int cantidadAsientos (){
+		int contador = 0;
+		for (Asiento i:asientos) {
+			if(i != null) {
+				contador++;
+			}
+		}
+		return contador;
 	}
 	
-	String verificarIntegridad(Motor motor,Asiento[] asientos) {
+	String verificarIntegridad() {
 		if (registro == motor.registro) {
 			for (int i = 0;i < asientos.length;i++) {
 				if (asientos[i].registro != registro) {

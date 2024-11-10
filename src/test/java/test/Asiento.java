@@ -1,7 +1,7 @@
 package test;
 
 public class Asiento {
-	String color = new String();
+	String color;
 	int precio;
 	int registro;
 	
